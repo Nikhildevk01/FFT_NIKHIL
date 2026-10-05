@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>College Sports Meet 2026</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+        }
+
+       
+
+        header {
+            background: rgb(54, 175, 219);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 20px;
+            text-shadow: 2px 3px 10px white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+        }
+
+        nav li {
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: white;
+            color: #1e40af;
+        }
+
+
+        
+
+        .top {
+            text-align: center;
+            margin: auto;
+            padding: 100px 20px;
+            background-color: #e0f2fe;
+        }
+
+        .top h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .top p {
+            font-size: 20px;
+            margin: 10px;
+        }
+
+
+       
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: #141313;
+        }
+
+
+        
+
+        .d1 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .d2 {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .d2 h3 {
+            margin-bottom: 10px;
+        }
+
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            border: 1px solid #0e0d0d;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4397e7;
+            color: white;
+        }
+
+
+        
+
+        .speaker {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .s1 {
+            background-color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .speaker-img {
+            width: 100px;
+            height: 100px;
+            margin: auto;
+            margin-bottom: 15px;
+            border-radius: 50%;
+            background-color: #e0e7ff;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 50px;
+        }
+
+
+
+        .reg {
+            max-width: 700px;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border: 1px solid #100f0f;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 50%;
+            padding: 13px;
+            margin-top: 20px;
+            margin-left: 25%;
+            border: none;
+            border-radius: 5px;
+            background-color: #5f11f0;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1e40af;
+        }
+
+
+        /* CONTACT */
+
+        .contact {
+            background-color: #4397e7;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            margin: 8px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* TABLET */
+
+        @media (max-width: 900px) {
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .d1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .speaker {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 28px;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 8px;
+            }
+
+            .top {
+                padding: 70px 15px;
+            }
+
+            .top h2 {
+                font-size: 30px;
+            }
+
+            .top p {
+                font-size: 16px;
+            }
+
+            .d1,
+            .speaker {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 40px 15px;
+            }
+
+            .section h2 {
+                font-size: 26px;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            form {
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER / NAVIGATION -->
+
+    <header>
+
+        <h1>College Sports Meet 2026</h1>
+
+        <nav>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#details">Details</a>
+            </li>
+
+            <li>
+                <a href="#schedule">Schedule</a>
+            </li>
+
+            <li>
+                <a href="#speakers">Speakers</a>
+            </li>
+
+            <li>
+                <a href="#register">Register</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+
+    <section class="top" id="home">
+
+        <h2>SPORTS MEET 2026</h2>
+
+        <p>
+            Physically Elite, Mentally Unstoppable!!
+        </p>
+
+        <p>
+            October 13, 2026 | College Ground
+        </p>
+
+    </section>
+
+
+    <!-- DETAILS -->
+
+    <section id="details" class="section">
+
+        <h2>Details</h2>
+
+        <div class="d1">
+
+            <div class="d2">
+                <h3>Date</h3>
+                <p>28 September 2026</p>
+            </div>
+
+            <div class="d2">
+                <h3>Time</h3>
+                <p>10:30 AM - 5:00 PM</p>
+            </div>
+
+            <div class="d2">
+                <h3>Venue</h3>
+                <p>College Main Ground</p>
+            </div>
+
+            <div class="d2">
+                <h3>Organized By</h3>
+                <p>Department of Physical Education</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCHEDULE -->
+
+    <section id="schedule" class="section">
+
+        <h2>Event Schedule</h2>
+
+        <table>
+
+            <tr>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Venue</th>
+            </tr>
+
+            <tr>
+                <td>10:30 AM</td>
+                <td>Inauguration</td>
+                <td>College Main Ground</td>
+            </tr>
+
+            <tr>
+                <td>11:00 AM</td>
+                <td>Torch Lighting Ceremony</td>
+                <td>College Main Ground</td>
+            </tr>
+
+            <tr>
+                <td>11:30 AM</td>
+                <td>100, 200, 400 Meter Race</td>
+                <td>Sub Ground</td>
+            </tr>
+
+            <tr>
+                <td>01:00 PM</td>
+                <td>Lunch Break</td>
+                <td>Food Court</td>
+            </tr>
+
+            <tr>
+                <td>02:00 PM</td>
+                <td>Shot Put, Disc Throw</td>
+                <td>Sub Ground</td>
+            </tr>
+
+            <tr>
+                <td>03:00 PM</td>
+                <td>Long Jump, High Jump</td>
+                <td>Main Ground</td>
+            </tr>
+
+            <tr>
+                <td>04:00 PM</td>
+                <td>Relay Run</td>
+                <td>Main Ground</td>
+            </tr>
+
+            <tr>
+                <td>05:00 PM</td>
+                <td>Prize Distribution</td>
+                <td>Main Ground</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <!-- SPEAKERS -->
+
+    <section id="speakers" class="section">
+
+        <h2>Our Speakers</h2>
+
+        <div class="speaker">
+
+            <div class="s1">
+
+                <div class="speaker-img">
+                    
+                </div>
+
+                <h3>Dr. Ray Titus</h3>
+
+                <p>
+                    Dean, Pro Vice-Chancellor
+                </p>
+
+            </div>
+
+
+            <div class="s1">
+
+                <div class="speaker-img">
+                    
+                </div>
+
+                <h3>Dr. V. S. Patial</h3>
+
+                <p>
+                    HOD of Physical Education
+                </p>
+
+            </div>
+
+
+            <div class="s1">
+
+                <div class="speaker-img">
+                    
+                </div>
+
+                <h3>Dr. B. Priestly Shan</h3>
+
+                <p>
+                    Vice-Chancellor
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- REGISTRATION -->
+
+    <section id="register" class="section reg">
+
+        <h2>Register for the Sports Meet</h2>
+
+        <form>
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+            <label>Department</label>
+
+            <input
+                type="text"
+                placeholder="Enter your department"
+                required
+            >
+
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            Email: sportsmeet@college.au.edu.in
+        </p>
+
+        <p>
+            Phone: +91 9656175765
+        </p>
+
+        <p>
+            Alliance Main Campus, Anekal Road, Bengaluru
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 College Sports Meet. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
