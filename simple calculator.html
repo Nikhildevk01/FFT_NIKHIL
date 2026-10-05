@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>simple calculator</title>
+
+        <style>
+                  button{
+
+                transition: 1s;
+            }
+            button:hover{
+
+                transform: scale(1.7);
+            }
+
+        </style>
+    </head>
+    <body>
+        
+        <h1>Simple calculator</h1>
+   
+
+    <form>
+
+        <input type="number" name="n1" id="one"><br><br><br>
+        <input type="number" name="n2" id="two"><br><br><br>
+        <button type="button" onclick="Add()">Add</button>
+        <button type="reset">Reset</button>
+        <p id="result">Result:</p>
+
+    </form>
+
+    <script>
+
+        function Add(){
+
+            let n1= Number(document.getElementById("one").value);
+            let n2= Number(document.getElementById("two").value);
+            let sum= n1+n2;
+            document.getElementById("result").innerHTML="Result:"+sum;
+
+
+
+        }
+
+             
+
+    </script>
+     </body>
+</html>
